@@ -1,4 +1,4 @@
-[obp-sdk-ts](../README.md) / [Modules](../modules.md) / [api](../modules/api.md) / Version
+[obp-typescript](../README.md) / [Modules](../modules.md) / [api](../modules/api.md) / Version
 
 # Enumeration: Version
 

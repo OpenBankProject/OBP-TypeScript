@@ -1,4 +1,4 @@
-[obp-sdk-ts](../README.md) / [Modules](../modules.md) / index
+[obp-typescript](../README.md) / [Modules](../modules.md) / index
 
 # Module: index
 

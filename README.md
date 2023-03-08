@@ -1,20 +1,20 @@
-# obp-sdk-ts
+# OBP-TypeScript
 
 ## Usage
 
 #### Symlink
 
-Checkout the obp-sdk-ts library from https://github.com/mark-tesobe/OBP-SDK.
+Checkout the obp-typescript library from https://github.com/OpenBankProject/OBP-TypeScript.
 Inside the obp-sdk repository folder, execute the **yarn link** command.
 
 ```
   yarn link
 ```
 
-To link the **obp-sdk-ts** library into your app, run the command inside your app.
+To link the **obp-typescript** library into your app, run the command inside your app.
 
 ```
-  yarn link obp-sdk-ts
+  yarn link obp-typescript
 ```
 
 #### Example
@@ -33,7 +33,7 @@ import {
   GetTransactionsForAccountFull,
   TransactionRequestAccountBody,
   CreateTransactionRequestAccount,
-} from "obp-sdk-ts/src";
+} from "obp-typescript/src";
 
 (async () => {
   const directLogin: DirectLoginAuthentication = {

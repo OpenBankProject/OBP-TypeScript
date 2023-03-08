@@ -1,4 +1,4 @@
-[obp-sdk-ts](../README.md) / [Modules](../modules.md) / api
+[obp-typescript](../README.md) / [Modules](../modules.md) / api
 
 # Module: api
 
