@@ -6,7 +6,7 @@ const jestConfig: JestConfigWithTsJest = {
   testTimeout: 1000000,
   modulePathIgnorePatterns: ["<rootDir>/dist/"],
   moduleNameMapper: {
-    "^@obp-sdk-ts/(.*)$": "<rootDir>/src/$1",
+    "^@obp-typescript/(.*)$": "<rootDir>/src/$1",
   },
   reporters: ["default", "jest-junit"],
   globals: {

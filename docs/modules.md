@@ -1,6 +1,6 @@
-[obp-sdk-ts](README.md) / Modules
+[obp-typescript](README.md) / Modules
 
-# obp-sdk-ts
+# obp-typescript
 
 ## Table of contents
 
