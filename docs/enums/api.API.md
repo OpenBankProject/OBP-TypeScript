@@ -27,7 +27,7 @@ Types of OBP API.
 
 #### Defined in
 
-[api/client.ts:20](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/client.ts#L20)
+[api/client.ts:45](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L45)
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 #### Defined in
 
-[api/client.ts:19](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/client.ts#L19)
+[api/client.ts:44](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L44)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[api/client.ts:24](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/client.ts#L24)
+[api/client.ts:49](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L49)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[api/client.ts:25](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/client.ts#L25)
+[api/client.ts:50](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L50)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[api/client.ts:26](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/client.ts#L26)
+[api/client.ts:51](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L51)
 
 ___
 
@@ -77,7 +77,7 @@ ___
 
 #### Defined in
 
-[api/client.ts:21](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/client.ts#L21)
+[api/client.ts:46](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L46)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[api/client.ts:22](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/client.ts#L22)
+[api/client.ts:47](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L47)
 
 ___
 
@@ -97,4 +97,4 @@ ___
 
 #### Defined in
 
-[api/client.ts:23](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/client.ts#L23)
+[api/client.ts:48](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L48)

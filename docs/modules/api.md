@@ -82,7 +82,7 @@ authentication
 
 #### Defined in
 
-[api/client.ts:58](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/client.ts#L58)
+[api/client.ts:83](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L83)
 
 ___
 
@@ -120,7 +120,7 @@ Alias for APIRequest properties.
 
 #### Defined in
 
-[api/client.ts:97](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/client.ts#L97)
+[api/client.ts:122](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L122)
 
 ___
 
@@ -152,7 +152,7 @@ consumerKey
 
 #### Defined in
 
-[api/client.ts:38](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/client.ts#L38)
+[api/client.ts:63](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L63)
 
 ___
 
@@ -202,7 +202,7 @@ APIClientConfig
 
 #### Defined in
 
-[api/client.ts:78](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/client.ts#L78)
+[api/client.ts:103](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L103)
 
 ___
 
@@ -238,7 +238,7 @@ value
 
 #### Defined in
 
-[api/transaction.ts:18](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/transaction.ts#L18)
+[api/transaction.ts:43](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/transaction.ts#L43)
 
 ## Variables
 
@@ -263,7 +263,7 @@ A higher order function
 
 #### Defined in
 
-[api/account.ts:42](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/account.ts#L42)
+[api/account.ts:67](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/account.ts#L67)
 
 ___
 
@@ -288,7 +288,7 @@ A higher order function
 
 #### Defined in
 
-[api/bank.ts:61](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/bank.ts#L61)
+[api/bank.ts:86](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/bank.ts#L86)
 
 ___
 
@@ -313,7 +313,7 @@ A higher order function
 
 #### Defined in
 
-[api/customer.ts:147](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/customer.ts#L147)
+[api/customer.ts:172](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/customer.ts#L172)
 
 ___
 
@@ -338,7 +338,7 @@ A higher order function
 
 #### Defined in
 
-api/kyc.ts:40
+[api/kyc.ts:65](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/kyc.ts#L65)
 
 ___
 
@@ -363,7 +363,7 @@ A higher order function
 
 #### Defined in
 
-api/metadata.ts:43
+[api/metadata.ts:68](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/metadata.ts#L68)
 
 ___
 
@@ -388,7 +388,7 @@ A higher order function
 
 #### Defined in
 
-[api/transaction.ts:97](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/transaction.ts#L97)
+[api/transaction.ts:122](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/transaction.ts#L122)
 
 ___
 
@@ -413,7 +413,7 @@ A higher order function
 
 #### Defined in
 
-[api/user.ts:39](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/user.ts#L39)
+[api/user.ts:64](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/user.ts#L64)
 
 ## Functions
 
@@ -470,7 +470,7 @@ A curried function
 
 #### Defined in
 
-[api/transaction.ts:69](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/transaction.ts#L69)
+[api/transaction.ts:94](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/transaction.ts#L94)
 
 ___
 
@@ -500,7 +500,7 @@ A curried function
 
 #### Defined in
 
-[api/user.ts:20](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/user.ts#L20)
+[api/user.ts:45](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/user.ts#L45)
 
 ___
 
@@ -542,7 +542,7 @@ A curried function
 
 #### Defined in
 
-[api/account.ts:21](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/account.ts#L21)
+[api/account.ts:46](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/account.ts#L46)
 
 ___
 
@@ -572,7 +572,7 @@ A curried function
 
 #### Defined in
 
-[api/bank.ts:42](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/bank.ts#L42)
+[api/bank.ts:67](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/bank.ts#L67)
 
 ___
 
@@ -614,7 +614,7 @@ A curried function
 
 #### Defined in
 
-[api/bank.ts:21](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/bank.ts#L21)
+[api/bank.ts:46](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/bank.ts#L46)
 
 ___
 
@@ -643,7 +643,7 @@ A curried function
 
 #### Defined in
 
-[api/customer.ts:74](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/customer.ts#L74)
+[api/customer.ts:99](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/customer.ts#L99)
 
 ___
 
@@ -684,7 +684,7 @@ A curried function
 
 #### Defined in
 
-[api/customer.ts:93](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/customer.ts#L93)
+[api/customer.ts:118](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/customer.ts#L118)
 
 ___
 
@@ -725,7 +725,7 @@ A curried function
 
 #### Defined in
 
-api/kyc.ts:20
+[api/kyc.ts:45](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/kyc.ts#L45)
 
 ___
 
@@ -768,7 +768,7 @@ A curried function
 
 #### Defined in
 
-api/metadata.ts:20
+[api/metadata.ts:45](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/metadata.ts#L45)
 
 ___
 
@@ -812,7 +812,7 @@ A curried function
 
 #### Defined in
 
-[api/transaction.ts:43](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/transaction.ts#L43)
+[api/transaction.ts:68](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/transaction.ts#L68)
 
 ___
 
@@ -848,7 +848,7 @@ An
 
 #### Defined in
 
-[api/client.ts:303](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/client.ts#L303)
+[api/client.ts:328](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L328)
 
 ___
 
@@ -884,4 +884,4 @@ An
 
 #### Defined in
 
-[api/client.ts:284](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/client.ts#L284)
+[api/client.ts:309](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L309)
