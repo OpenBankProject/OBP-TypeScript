@@ -1,12 +1,12 @@
 obp-typescript / [Modules](modules.md)
 
-# obp-typescript
+# OBP-TypeScript
 
 ## Usage
 
 #### Symlink
 
-Checkout the obp-typescript library from https://github.com/mark-tesobe/OBP-SDK.
+Checkout the obp-typescript library from https://github.com/OpenBankProject/OBP-TypeScript.
 Inside the obp-sdk repository folder, execute the **yarn link** command.
 
 ```

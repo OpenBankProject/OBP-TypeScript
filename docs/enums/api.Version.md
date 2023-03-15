@@ -21,7 +21,7 @@ OBP API Versions.
 
 #### Defined in
 
-[api/client.ts:9](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/client.ts#L9)
+[api/client.ts:34](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L34)
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 #### Defined in
 
-[api/client.ts:10](https://github.com/mark-tesobe/OBP-SDK/blob/92f681c/src/api/client.ts#L10)
+[api/client.ts:35](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L35)
