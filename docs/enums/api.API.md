@@ -11,6 +11,7 @@ Types of OBP API.
 ### Enumeration Members
 
 - [Account](api.API.md#account)
+- [Any](api.API.md#any)
 - [Bank](api.API.md#bank)
 - [Customer](api.API.md#customer)
 - [KYC](api.API.md#kyc)
@@ -27,7 +28,17 @@ Types of OBP API.
 
 #### Defined in
 
-[api/client.ts:45](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L45)
+[api/client.ts:45](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/client.ts#L45)
+
+___
+
+### Any
+
+• **Any** = ``8``
+
+#### Defined in
+
+[api/client.ts:52](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/client.ts#L52)
 
 ___
 
@@ -37,7 +48,7 @@ ___
 
 #### Defined in
 
-[api/client.ts:44](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L44)
+[api/client.ts:44](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/client.ts#L44)
 
 ___
 
@@ -47,7 +58,7 @@ ___
 
 #### Defined in
 
-[api/client.ts:49](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L49)
+[api/client.ts:49](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/client.ts#L49)
 
 ___
 
@@ -57,7 +68,7 @@ ___
 
 #### Defined in
 
-[api/client.ts:50](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L50)
+[api/client.ts:50](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/client.ts#L50)
 
 ___
 
@@ -67,7 +78,7 @@ ___
 
 #### Defined in
 
-[api/client.ts:51](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L51)
+[api/client.ts:51](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/client.ts#L51)
 
 ___
 
@@ -77,7 +88,7 @@ ___
 
 #### Defined in
 
-[api/client.ts:46](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L46)
+[api/client.ts:46](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/client.ts#L46)
 
 ___
 
@@ -87,7 +98,7 @@ ___
 
 #### Defined in
 
-[api/client.ts:47](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L47)
+[api/client.ts:47](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/client.ts#L47)
 
 ___
 
@@ -97,4 +108,4 @@ ___
 
 #### Defined in
 
-[api/client.ts:48](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L48)
+[api/client.ts:48](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/client.ts#L48)

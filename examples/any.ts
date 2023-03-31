@@ -4,10 +4,9 @@ import {
   DirectLoginAuthentication,
   Version,
   get,
-  Bank,
-  GetBanks,
-  GetBanksById,
-} from "obp-typescript/src";
+  Any,
+  GetAny,
+} from "../src/api";
 
 const directLogin: DirectLoginAuthentication = {
   username: process.env.OBP_USERNAME,
@@ -21,13 +20,10 @@ const clientConfig: APIClientConfig = {
 };
 
 (async () => {
-  // Get Banks
-  console.log(await get<API.Bank>(clientConfig, Bank)(GetBanks));
-
-  // Get Bank specified by BANK_ID
+  // Get Resource Docs
   console.log(
-    await get<API.Bank>(clientConfig, Bank)(GetBanksById)(
-      "d8839721-ad8f-45dd-9f78-2080414b93f9"
+    await get<API.Any>(clientConfig, Any)(GetAny)(
+      "/resource-docs/v5.1.0/obp?tags=Account"
     )
   );
 })();

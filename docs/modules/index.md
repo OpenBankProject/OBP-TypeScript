@@ -10,12 +10,14 @@
 - [APIClientConfig](index.md#apiclientconfig)
 - [APIRequest](index.md#apirequest)
 - [Account](index.md#account)
+- [Any](index.md#any)
 - [Bank](index.md#bank)
 - [CreateTransactionRequestAccount](index.md#createtransactionrequestaccount)
 - [Current](index.md#current)
 - [Customer](index.md#customer)
 - [DirectLoginAuthentication](index.md#directloginauthentication)
 - [GetAccountsByBankId](index.md#getaccountsbybankid)
+- [GetAny](index.md#getany)
 - [GetBanks](index.md#getbanks)
 - [GetBanksById](index.md#getbanksbyid)
 - [GetCustomersAtAnyBank](index.md#getcustomersatanybank)
@@ -59,6 +61,12 @@ Re-exports [Account](api.md#account)
 
 ___
 
+### Any
+
+Re-exports [Any](api.md#any)
+
+___
+
 ### Bank
 
 Re-exports [Bank](api.md#bank)
@@ -92,6 +100,12 @@ ___
 ### GetAccountsByBankId
 
 Re-exports [GetAccountsByBankId](api.md#getaccountsbybankid)
+
+___
+
+### GetAny
+
+Re-exports [GetAny](api.md#getany)
 
 ___
 

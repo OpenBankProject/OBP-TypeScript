@@ -20,6 +20,7 @@
 ### Variables
 
 - [Account](api.md#account)
+- [Any](api.md#any)
 - [Bank](api.md#bank)
 - [Customer](api.md#customer)
 - [KYC](api.md#kyc)
@@ -32,6 +33,7 @@
 - [CreateTransactionRequestAccount](api.md#createtransactionrequestaccount)
 - [Current](api.md#current)
 - [GetAccountsByBankId](api.md#getaccountsbybankid)
+- [GetAny](api.md#getany)
 - [GetBanks](api.md#getbanks)
 - [GetBanksById](api.md#getbanksbyid)
 - [GetCustomersAtAnyBank](api.md#getcustomersatanybank)
@@ -82,7 +84,7 @@ authentication
 
 #### Defined in
 
-[api/client.ts:83](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L83)
+[api/client.ts:84](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/client.ts#L84)
 
 ___
 
@@ -120,7 +122,7 @@ Alias for APIRequest properties.
 
 #### Defined in
 
-[api/client.ts:122](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L122)
+[api/client.ts:123](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/client.ts#L123)
 
 ___
 
@@ -152,7 +154,7 @@ consumerKey
 
 #### Defined in
 
-[api/client.ts:63](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L63)
+[api/client.ts:64](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/client.ts#L64)
 
 ___
 
@@ -202,7 +204,7 @@ APIClientConfig
 
 #### Defined in
 
-[api/client.ts:103](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L103)
+[api/client.ts:104](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/client.ts#L104)
 
 ___
 
@@ -238,7 +240,7 @@ value
 
 #### Defined in
 
-[api/transaction.ts:43](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/transaction.ts#L43)
+[api/transaction.ts:43](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/transaction.ts#L43)
 
 ## Variables
 
@@ -263,7 +265,32 @@ A higher order function
 
 #### Defined in
 
-[api/account.ts:67](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/account.ts#L67)
+[api/account.ts:67](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/account.ts#L67)
+
+___
+
+### Any
+
+• `Const` **Any**: [`APIRequest`](api.md#apirequest)<[`Any`](../enums/api.API.md#any)\>
+
+Returns an anonymous function for creating or getting Any data.
+
+**`Param`**
+
+The APIClientConfig object
+
+**`Param`**
+
+A higher order function
+
+**`See`**
+
+ - [APIClientConfig](api.md#apiclientconfig)
+ - [APIRequest](api.md#apirequest)
+
+#### Defined in
+
+[api/any.ts:66](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/any.ts#L66)
 
 ___
 
@@ -288,7 +315,7 @@ A higher order function
 
 #### Defined in
 
-[api/bank.ts:86](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/bank.ts#L86)
+[api/bank.ts:86](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/bank.ts#L86)
 
 ___
 
@@ -313,7 +340,7 @@ A higher order function
 
 #### Defined in
 
-[api/customer.ts:172](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/customer.ts#L172)
+[api/customer.ts:172](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/customer.ts#L172)
 
 ___
 
@@ -338,7 +365,7 @@ A higher order function
 
 #### Defined in
 
-[api/kyc.ts:65](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/kyc.ts#L65)
+[api/kyc.ts:65](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/kyc.ts#L65)
 
 ___
 
@@ -363,7 +390,7 @@ A higher order function
 
 #### Defined in
 
-[api/metadata.ts:68](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/metadata.ts#L68)
+[api/metadata.ts:68](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/metadata.ts#L68)
 
 ___
 
@@ -388,7 +415,7 @@ A higher order function
 
 #### Defined in
 
-[api/transaction.ts:122](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/transaction.ts#L122)
+[api/transaction.ts:122](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/transaction.ts#L122)
 
 ___
 
@@ -413,7 +440,7 @@ A higher order function
 
 #### Defined in
 
-[api/user.ts:64](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/user.ts#L64)
+[api/user.ts:64](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/user.ts#L64)
 
 ## Functions
 
@@ -470,7 +497,7 @@ A curried function
 
 #### Defined in
 
-[api/transaction.ts:94](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/transaction.ts#L94)
+[api/transaction.ts:94](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/transaction.ts#L94)
 
 ___
 
@@ -500,7 +527,7 @@ A curried function
 
 #### Defined in
 
-[api/user.ts:45](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/user.ts#L45)
+[api/user.ts:45](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/user.ts#L45)
 
 ___
 
@@ -542,7 +569,49 @@ A curried function
 
 #### Defined in
 
-[api/account.ts:46](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/account.ts#L46)
+[api/account.ts:46](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/account.ts#L46)
+
+___
+
+### GetAny
+
+▸ **GetAny**(`config`, `methodCall`): (`path`: `string`) => `Promise`<`any`\>
+
+Get any data.
+Returns the response of the requested endpoint.
+
+**`See`**
+
+[APIClientConfig](api.md#apiclientconfig)
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `config` | [`APIClientConfig`](api.md#apiclientconfig) | The APIClientConfig object |
+| `methodCall` | (`config`: [`APIClientConfig`](api.md#apiclientconfig), `path`: `string`) => `Promise`<`any`\> | A higher order function |
+
+#### Returns
+
+`fn`
+
+A curried function
+
+▸ (`path`): `Promise`<`any`\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `path` | `string` |
+
+##### Returns
+
+`Promise`<`any`\>
+
+#### Defined in
+
+[api/any.ts:46](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/any.ts#L46)
 
 ___
 
@@ -572,7 +641,7 @@ A curried function
 
 #### Defined in
 
-[api/bank.ts:67](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/bank.ts#L67)
+[api/bank.ts:67](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/bank.ts#L67)
 
 ___
 
@@ -614,7 +683,7 @@ A curried function
 
 #### Defined in
 
-[api/bank.ts:46](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/bank.ts#L46)
+[api/bank.ts:46](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/bank.ts#L46)
 
 ___
 
@@ -643,7 +712,7 @@ A curried function
 
 #### Defined in
 
-[api/customer.ts:99](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/customer.ts#L99)
+[api/customer.ts:99](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/customer.ts#L99)
 
 ___
 
@@ -684,7 +753,7 @@ A curried function
 
 #### Defined in
 
-[api/customer.ts:118](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/customer.ts#L118)
+[api/customer.ts:118](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/customer.ts#L118)
 
 ___
 
@@ -725,7 +794,7 @@ A curried function
 
 #### Defined in
 
-[api/kyc.ts:45](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/kyc.ts#L45)
+[api/kyc.ts:45](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/kyc.ts#L45)
 
 ___
 
@@ -768,7 +837,7 @@ A curried function
 
 #### Defined in
 
-[api/metadata.ts:45](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/metadata.ts#L45)
+[api/metadata.ts:45](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/metadata.ts#L45)
 
 ___
 
@@ -812,7 +881,7 @@ A curried function
 
 #### Defined in
 
-[api/transaction.ts:68](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/transaction.ts#L68)
+[api/transaction.ts:68](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/transaction.ts#L68)
 
 ___
 
@@ -848,7 +917,7 @@ An
 
 #### Defined in
 
-[api/client.ts:328](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L328)
+[api/client.ts:329](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/client.ts#L329)
 
 ___
 
@@ -884,4 +953,4 @@ An
 
 #### Defined in
 
-[api/client.ts:309](https://github.com/mark-tesobe/OBP-TypeScript/blob/63ad0a8/src/api/client.ts#L309)
+[api/client.ts:310](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/client.ts#L310)
