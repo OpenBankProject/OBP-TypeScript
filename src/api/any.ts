@@ -31,7 +31,8 @@ import {
 } from "./client";
 
 /**
- * Get the KYC statuses for a customer specified by CUSTOMER_ID over time.
+ * Get any data.
+ * Returns the response of the requested endpoint.
  *
  * @param config - The APIClientConfig object
  * @param methodCall - A higher order function
@@ -41,17 +42,17 @@ import {
  *
  * @public
  */
-export const GetKYCStatus =
+export const GetAny =
   (
     config: APIClientConfig,
     methodCall: (config: APIClientConfig, path: string) => Promise<any>
   ) =>
-  async (customerId: string) => {
-    return await methodCall(config, `/customers/${customerId}/kyc_statuses`);
+  async (path: string) => {
+    return await methodCall(config, path);
   };
 
 /**
- * Returns an anonymous function for creating or getting KYC data.
+ * Returns an anonymous function for creating or getting Any data.
  *
  * @param config - The APIClientConfig object
  * @param methodCall - A higher order function
@@ -62,11 +63,11 @@ export const GetKYCStatus =
  *
  * @public
  */
-export const KYC: APIRequest<API.KYC> = {
+export const Any: APIRequest<API.Any> = {
   get: (
     config: APIClientConfig,
     methodCall: (config: APIClientConfig, path: string) => Promise<any>
   ) => {
-    return apiCallWithCustomURIPath<API.KYC>(config, methodCall);
+    return apiCallWithCustomURIPath<API.Any>(config, methodCall);
   },
 };
