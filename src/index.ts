@@ -51,3 +51,4 @@ export {
   get,
   create,
 } from "./api/client";
+export { OAuth, OAuthConfig } from "./oauth";

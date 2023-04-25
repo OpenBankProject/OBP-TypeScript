@@ -24,6 +24,7 @@
  */
 
 import superagent from "superagent";
+import { OAuth, OAuthConfig } from "../oauth";
 
 /**
  * OBP API Versions.
@@ -73,7 +74,7 @@ export type DirectLoginAuthentication = {
  *
  * @Property {string} baseUri
  * @Property {Version} version
- * @Property {DirectLoginAuthentication} authentication
+ * @Property {DirectLoginAuthentication} [authentication]
  * @Property {string} [token]
  *
  * @see {@link Version}
@@ -84,7 +85,8 @@ export type DirectLoginAuthentication = {
 export type APIClientConfig = {
   baseUri: string;
   version: Version;
-  authentication: DirectLoginAuthentication;
+  authentication?: DirectLoginAuthentication;
+  oauthConfig?: OAuthConfig;
   token?: string;
 };
 
@@ -256,11 +258,20 @@ export const getRequest = async (
   path: string
 ): Promise<any> => {
   const pathUri = uri(config, path);
-  if (!config.token) {
-    config.token = await getDirectLoginToken(config);
+  let header: any;
+  if (config.oauthConfig) {
+    if (!config.oauthConfig.baseUri)
+      config.oauthConfig["baseUri"] = config.baseUri;
+    const oauth = new OAuth(config.oauthConfig);
+    header = oauth.authHeader(pathUri, "GET");
+  } else {
+    if (!config.token) {
+      config.token = await getDirectLoginToken(config);
+      header = config.token;
+    }
   }
   return JSON.parse(
-    (await superagent.get(pathUri).set("Authorization", config.token)).text
+    (await superagent.get(pathUri).set("Authorization", header)).text
   );
 };
 
