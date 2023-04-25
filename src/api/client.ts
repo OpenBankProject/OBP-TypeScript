@@ -85,6 +85,7 @@ export type DirectLoginAuthentication = {
 export type APIClientConfig = {
   baseUri: string;
   version: Version;
+  withFixedVersion?: boolean;
   authentication?: DirectLoginAuthentication;
   oauthConfig?: OAuthConfig;
   token?: string;
@@ -157,10 +158,19 @@ export type RequestParameter<T> = (
 const uri = (config: APIClientConfig, path: string): string => {
   const base = config.baseUri;
   const version = config.version;
-  if (path.startsWith("/")) {
-    return `${base}/obp/${version}${path}`;
+  if (config.withFixedVersion) {
+    // path is fixed to host/obp/version
+    if (path.startsWith("/")) {
+      return `${base}/obp/${version}${path}`;
+    } else {
+      return `${base}/obp/${version}/${path}`;
+    }
   } else {
-    return `${base}/obp/${version}/${path}`;
+    if (path.startsWith("/")) {
+      return `${base}${path}`;
+    } else {
+      return `${base}/${path}`;
+    }
   }
 };
 
