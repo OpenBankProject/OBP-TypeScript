@@ -89,24 +89,24 @@ const clientConfig: APIClientConfig = {
   //  )(transactionAttributeUpdate)
   //);
   // Create transaction attribute definition
-  //const transactionAttributeDefinition = {
-  //  name: "SPECIAL_TAX_NUMBER",
-  //  category: "TransactionRequest",
-  //  type: "STRING",
-  //  description: "description",
-  //  alias: "STRING",
-  //  can_be_seen_on_views: ["bank"],
-  //  is_active: true,
-  //};
-  //console.log(
-  //  await update<API.Any>(clientConfig, Any)(UpdateAny)(
-  //    "banks/rbs/attribute-definitions/transaction-request"
-  //  )(transactionAttributeDefinition)
-  //);
-  // Delete transaction attribute definition
+  const transactionAttributeDefinition = {
+    name: "SPECIAL_TAX_NUMBER",
+    category: "TransactionRequest",
+    type: "STRING",
+    description: "description",
+    alias: "STRING",
+    can_be_seen_on_views: ["bank"],
+    is_active: true,
+  };
   console.log(
-    await discard<API.Any>(clientConfig, Any)(DiscardAny)(
-      "banks/rbs/attribute-definitions/06122dff-8575-4ff1-9f42-427d3e44ac88/transaction-request"
-    )
+    await update<API.Any>(clientConfig, Any)(UpdateAny)(
+      "banks/rbs/attribute-definitions/transaction-request"
+    )(transactionAttributeDefinition)
   );
+  // Delete transaction attribute definition
+  //console.log(
+  //  await discard<API.Any>(clientConfig, Any)(DiscardAny)(
+  //    "banks/rbs/attribute-definitions/06122dff-8575-4ff1-9f42-427d3e44ac88/transaction-request"
+  //  )
+  //);
 })();

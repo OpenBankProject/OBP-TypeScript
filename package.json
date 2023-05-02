@@ -1,9 +1,9 @@
 {
   "name": "obp-typescript",
-  "version": "1.0.2",
+  "version": "1.0.29",
   "license": "Apache-2.0",
   "scripts": {
-    "build": "tsc && tsc-alias",
+    "build": "tsc --declaration && tsc-alias",
     "test": "jest --setupFiles dotenv/config",
     "lint": "yarn prettier --w . && yarn eslint src __tests__"
   },
@@ -51,7 +51,11 @@
     ]
   },
   "description": "## Usage",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/*"
+  ],
   "directories": {
     "doc": "docs",
     "example": "examples"

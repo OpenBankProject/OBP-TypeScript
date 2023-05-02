@@ -53,4 +53,4 @@ export {
   update,
   discard,
 } from "./api/client";
-export { OAuth, OAuthConfig } from "./oauth";
+export { OAuth, OAuthConfig } from "./auth";
