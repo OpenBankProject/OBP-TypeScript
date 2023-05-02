@@ -30,8 +30,10 @@
 
 ### Functions
 
+- [CreateAny](api.md#createany)
 - [CreateTransactionRequestAccount](api.md#createtransactionrequestaccount)
 - [Current](api.md#current)
+- [DiscardAny](api.md#discardany)
 - [GetAccountsByBankId](api.md#getaccountsbybankid)
 - [GetAny](api.md#getany)
 - [GetBanks](api.md#getbanks)
@@ -41,8 +43,11 @@
 - [GetKYCStatus](api.md#getkycstatus)
 - [GetTagsOnAccount](api.md#gettagsonaccount)
 - [GetTransactionsForAccountFull](api.md#gettransactionsforaccountfull)
+- [UpdateAny](api.md#updateany)
 - [create](api.md#create)
+- [discard](api.md#discard)
 - [get](api.md#get)
+- [update](api.md#update)
 
 ## Type Aliases
 
@@ -62,7 +67,7 @@ version
 
 **`Property`**
 
-authentication
+[authentication]
 
 **`Property`**
 
@@ -77,14 +82,16 @@ authentication
 
 | Name | Type |
 | :------ | :------ |
-| `authentication` | [`DirectLoginAuthentication`](api.md#directloginauthentication) |
+| `authentication?` | [`DirectLoginAuthentication`](api.md#directloginauthentication) |
 | `baseUri` | `string` |
+| `oauthConfig?` | [`OAuthConfig`](auth.md#oauthconfig) |
 | `token?` | `string` |
 | `version` | [`Version`](../enums/api.Version.md) |
+| `withFixedVersion?` | `boolean` |
 
 #### Defined in
 
-[api/client.ts:84](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/client.ts#L84)
+[api/client.ts:85](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/client.ts#L85)
 
 ___
 
@@ -118,11 +125,13 @@ Alias for APIRequest properties.
 | Name | Type |
 | :------ | :------ |
 | `create?` | (`config`: [`APIClientConfig`](api.md#apiclientconfig), `methodCall`: [`MethodCall`](api.md#methodcall)<`T`\>) => `any` |
+| `discard?` | (`config`: [`APIClientConfig`](api.md#apiclientconfig), `methodCall`: [`MethodCall`](api.md#methodcall)<`T`\>) => `any` |
 | `get?` | (`config`: [`APIClientConfig`](api.md#apiclientconfig), `methodCall`: [`MethodCall`](api.md#methodcall)<`T`\>) => `any` |
+| `update?` | (`config`: [`APIClientConfig`](api.md#apiclientconfig), `methodCall`: [`MethodCall`](api.md#methodcall)<`T`\>) => `any` |
 
 #### Defined in
 
-[api/client.ts:123](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/client.ts#L123)
+[api/client.ts:126](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/client.ts#L126)
 
 ___
 
@@ -154,7 +163,7 @@ consumerKey
 
 #### Defined in
 
-[api/client.ts:64](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/client.ts#L64)
+[api/client.ts:65](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/client.ts#L65)
 
 ___
 
@@ -204,7 +213,7 @@ APIClientConfig
 
 #### Defined in
 
-[api/client.ts:104](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/client.ts#L104)
+[api/client.ts:107](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/client.ts#L107)
 
 ___
 
@@ -240,7 +249,7 @@ value
 
 #### Defined in
 
-[api/transaction.ts:43](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/transaction.ts#L43)
+[api/transaction.ts:43](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/transaction.ts#L43)
 
 ## Variables
 
@@ -265,7 +274,7 @@ A higher order function
 
 #### Defined in
 
-[api/account.ts:67](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/account.ts#L67)
+[api/account.ts:67](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/account.ts#L67)
 
 ___
 
@@ -290,7 +299,7 @@ A higher order function
 
 #### Defined in
 
-[api/any.ts:66](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/any.ts#L66)
+[api/any.ts:138](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/any.ts#L138)
 
 ___
 
@@ -315,7 +324,7 @@ A higher order function
 
 #### Defined in
 
-[api/bank.ts:86](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/bank.ts#L86)
+[api/bank.ts:86](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/bank.ts#L86)
 
 ___
 
@@ -340,7 +349,7 @@ A higher order function
 
 #### Defined in
 
-[api/customer.ts:172](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/customer.ts#L172)
+[api/customer.ts:172](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/customer.ts#L172)
 
 ___
 
@@ -365,7 +374,7 @@ A higher order function
 
 #### Defined in
 
-[api/kyc.ts:65](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/kyc.ts#L65)
+[api/kyc.ts:65](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/kyc.ts#L65)
 
 ___
 
@@ -390,7 +399,7 @@ A higher order function
 
 #### Defined in
 
-[api/metadata.ts:68](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/metadata.ts#L68)
+[api/metadata.ts:68](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/metadata.ts#L68)
 
 ___
 
@@ -415,7 +424,7 @@ A higher order function
 
 #### Defined in
 
-[api/transaction.ts:122](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/transaction.ts#L122)
+[api/transaction.ts:122](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/transaction.ts#L122)
 
 ___
 
@@ -440,9 +449,63 @@ A higher order function
 
 #### Defined in
 
-[api/user.ts:64](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/user.ts#L64)
+[api/user.ts:64](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/user.ts#L64)
 
 ## Functions
+
+### CreateAny
+
+▸ **CreateAny**(`config`, `methodCall`): (`path`: `string`) => (`body`: `any`) => `Promise`<[`Any`](../enums/api.API.md#any)\>
+
+Create Any Request.
+
+**`See`**
+
+ - [APIClientConfig](api.md#apiclientconfig)
+ - [TransactionRequestAccountBody](api.md#transactionrequestaccountbody)
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `config` | [`APIClientConfig`](api.md#apiclientconfig) | The APIClientConfig object |
+| `methodCall` | (`config`: [`APIClientConfig`](api.md#apiclientconfig), `path`: `string`, `body`: `any`) => `Promise`<`any`\> | A higher order function |
+
+#### Returns
+
+`fn`
+
+A curried function
+
+▸ (`path`): (`body`: `any`) => `Promise`<[`Any`](../enums/api.API.md#any)\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `path` | `string` |
+
+##### Returns
+
+`fn`
+
+▸ (`body`): `Promise`<[`Any`](../enums/api.API.md#any)\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `body` | `any` |
+
+##### Returns
+
+`Promise`<[`Any`](../enums/api.API.md#any)\>
+
+#### Defined in
+
+[api/any.ts:68](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/any.ts#L68)
+
+___
 
 ### CreateTransactionRequestAccount
 
@@ -497,7 +560,7 @@ A curried function
 
 #### Defined in
 
-[api/transaction.ts:94](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/transaction.ts#L94)
+[api/transaction.ts:94](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/transaction.ts#L94)
 
 ___
 
@@ -527,7 +590,49 @@ A curried function
 
 #### Defined in
 
-[api/user.ts:45](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/user.ts#L45)
+[api/user.ts:45](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/user.ts#L45)
+
+___
+
+### DiscardAny
+
+▸ **DiscardAny**(`config`, `methodCall`): (`path`: `string`) => `Promise`<`any`\>
+
+Delete Any Request.
+
+**`See`**
+
+ - [APIClientConfig](api.md#apiclientconfig)
+ - [TransactionRequestAccountBody](api.md#transactionrequestaccountbody)
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `config` | [`APIClientConfig`](api.md#apiclientconfig) | The APIClientConfig object |
+| `methodCall` | (`config`: [`APIClientConfig`](api.md#apiclientconfig), `path`: `string`) => `Promise`<`any`\> | A higher order function |
+
+#### Returns
+
+`fn`
+
+A curried function
+
+▸ (`path`): `Promise`<`any`\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `path` | `string` |
+
+##### Returns
+
+`Promise`<`any`\>
+
+#### Defined in
+
+[api/any.ts:118](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/any.ts#L118)
 
 ___
 
@@ -569,7 +674,7 @@ A curried function
 
 #### Defined in
 
-[api/account.ts:46](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/account.ts#L46)
+[api/account.ts:46](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/account.ts#L46)
 
 ___
 
@@ -611,7 +716,7 @@ A curried function
 
 #### Defined in
 
-[api/any.ts:46](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/any.ts#L46)
+[api/any.ts:47](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/any.ts#L47)
 
 ___
 
@@ -641,7 +746,7 @@ A curried function
 
 #### Defined in
 
-[api/bank.ts:67](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/bank.ts#L67)
+[api/bank.ts:67](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/bank.ts#L67)
 
 ___
 
@@ -683,7 +788,7 @@ A curried function
 
 #### Defined in
 
-[api/bank.ts:46](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/bank.ts#L46)
+[api/bank.ts:46](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/bank.ts#L46)
 
 ___
 
@@ -712,7 +817,7 @@ A curried function
 
 #### Defined in
 
-[api/customer.ts:99](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/customer.ts#L99)
+[api/customer.ts:99](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/customer.ts#L99)
 
 ___
 
@@ -753,7 +858,7 @@ A curried function
 
 #### Defined in
 
-[api/customer.ts:118](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/customer.ts#L118)
+[api/customer.ts:118](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/customer.ts#L118)
 
 ___
 
@@ -794,7 +899,7 @@ A curried function
 
 #### Defined in
 
-[api/kyc.ts:45](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/kyc.ts#L45)
+[api/kyc.ts:45](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/kyc.ts#L45)
 
 ___
 
@@ -837,7 +942,7 @@ A curried function
 
 #### Defined in
 
-[api/metadata.ts:45](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/metadata.ts#L45)
+[api/metadata.ts:45](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/metadata.ts#L45)
 
 ___
 
@@ -881,7 +986,61 @@ A curried function
 
 #### Defined in
 
-[api/transaction.ts:68](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/transaction.ts#L68)
+[api/transaction.ts:68](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/transaction.ts#L68)
+
+___
+
+### UpdateAny
+
+▸ **UpdateAny**(`config`, `methodCall`): (`path`: `string`) => (`body`: `any`) => `Promise`<[`Any`](../enums/api.API.md#any)\>
+
+Update Any Request.
+
+**`See`**
+
+ - [APIClientConfig](api.md#apiclientconfig)
+ - [TransactionRequestAccountBody](api.md#transactionrequestaccountbody)
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `config` | [`APIClientConfig`](api.md#apiclientconfig) | The APIClientConfig object |
+| `methodCall` | (`config`: [`APIClientConfig`](api.md#apiclientconfig), `path`: `string`, `body`: `any`) => `Promise`<`any`\> | A higher order function |
+
+#### Returns
+
+`fn`
+
+A curried function
+
+▸ (`path`): (`body`: `any`) => `Promise`<[`Any`](../enums/api.API.md#any)\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `path` | `string` |
+
+##### Returns
+
+`fn`
+
+▸ (`body`): `Promise`<[`Any`](../enums/api.API.md#any)\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `body` | `any` |
+
+##### Returns
+
+`Promise`<[`Any`](../enums/api.API.md#any)\>
+
+#### Defined in
+
+[api/any.ts:93](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/any.ts#L93)
 
 ___
 
@@ -917,7 +1076,43 @@ An
 
 #### Defined in
 
-[api/client.ts:329](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/client.ts#L329)
+[api/client.ts:431](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/client.ts#L431)
+
+___
+
+### discard
+
+▸ **discard**<`T`\>(`config`, `request`): `any`
+
+A DELETE request function that deletes an API data.
+
+**`See`**
+
+ - APIClientConfig
+ - APIRequest<T>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `config` | [`APIClientConfig`](api.md#apiclientconfig) | The APIClientConfig object |
+| `request` | [`APIRequest`](api.md#apirequest)<`T`\> | The APIRequest object |
+
+#### Returns
+
+`any`
+
+An
+
+#### Defined in
+
+[api/client.ts:469](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/client.ts#L469)
 
 ___
 
@@ -953,4 +1148,40 @@ An
 
 #### Defined in
 
-[api/client.ts:310](https://github.com/mark-tesobe/OBP-TypeScript/blob/71468c3/src/api/client.ts#L310)
+[api/client.ts:412](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/client.ts#L412)
+
+___
+
+### update
+
+▸ **update**<`T`\>(`config`, `request`): `any`
+
+A PUT request function that updates an API data and returns the result.
+
+**`See`**
+
+ - APIClientConfig
+ - APIRequest<T>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `config` | [`APIClientConfig`](api.md#apiclientconfig) | The APIClientConfig object |
+| `request` | [`APIRequest`](api.md#apirequest)<`T`\> | The APIRequest object |
+
+#### Returns
+
+`any`
+
+An
+
+#### Defined in
+
+[api/client.ts:450](https://github.com/mark-tesobe/OBP-TypeScript/blob/bd9b673/src/api/client.ts#L450)

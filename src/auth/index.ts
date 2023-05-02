@@ -82,7 +82,7 @@ export class OAuth {
   /**
    * Get oauth.OAuth instance.
    *
-   * @returns An {oauth.OAuth} value
+   * @returns An oauth.OAuth value
    *
    * @public
    */
@@ -93,7 +93,7 @@ export class OAuth {
   /**
    * Get OAuthConfig object.
    *
-   * @returns An {OAuthConfig} value
+   * @returns An OAuthConfig value
    *
    * @public
    */
@@ -106,7 +106,7 @@ export class OAuth {
    *
    * @param pathUri - The the relative path of the URL.
    * @param method - The http method.
-   * @returns An {OAuthConfig} value
+   * @returns An OAuthConfig value
    *
    * @public
    */
