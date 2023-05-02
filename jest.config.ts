@@ -13,11 +13,9 @@ const jestConfig: JestConfigWithTsJest = {
     obpUsername: process.env.OBP_USERNAME,
     obpPassword: process.env.OBP_PASSWORD,
     obpConsumerKey: process.env.OBP_CONSUMER_KEY,
-    //obpBaseUri: "https://apisandbox.openbankproject.com",
-    obpBaseUri: "https://obp-apisandbox.joinfincubator.com",
+    obpBaseUri: "https://apisandbox.openbankproject.com",
     obpVersion: "v5.1.0",
-    //obpTestBank: "rbs",
-    obpTestBankId: "joinfincubator.01.uk.bk0",
+    obpTestBank: "obp1",
   },
 };
 

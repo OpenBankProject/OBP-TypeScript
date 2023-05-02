@@ -1,20 +1,17 @@
 # OBP-TypeScript
 
-## Usage
+#### Install
 
-#### Symlink
-
-Checkout the obp-typescript library from https://github.com/OpenBankProject/OBP-TypeScript.
-Inside the obp-sdk repository folder, execute the **yarn link** command.
+##### yarn
 
 ```
-  yarn link
+  yarn add obp-typescript
 ```
 
-To link the **obp-typescript** library into your app, run the command inside your app.
+##### npm
 
 ```
-  yarn link obp-typescript
+  npm install obp-typescript
 ```
 
 #### Example

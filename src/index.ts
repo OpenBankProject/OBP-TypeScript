@@ -40,7 +40,7 @@ export {
   CreateTransactionRequestAccount,
 } from "./api/transaction";
 export { User, Current } from "./api/user";
-export { Any, GetAny } from "./api/any";
+export { Any, GetAny, CreateAny, UpdateAny, DiscardAny } from "./api/any";
 export {
   API,
   Version,
@@ -50,5 +50,7 @@ export {
   DirectLoginAuthentication,
   get,
   create,
+  update,
+  discard,
 } from "./api/client";
 export { OAuth, OAuthConfig } from "./oauth";

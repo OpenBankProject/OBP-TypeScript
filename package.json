@@ -1,7 +1,7 @@
 {
   "name": "obp-typescript",
-  "version": "1.0.0",
-  "license": "MIT",
+  "version": "1.0.2",
+  "license": "Apache-2.0",
   "scripts": {
     "build": "tsc && tsc-alias",
     "test": "jest --setupFiles dotenv/config",
@@ -49,5 +49,27 @@
     "__tests__/**/*.ts": [
       "yarn lint"
     ]
-  }
+  },
+  "description": "## Usage",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenBankProject/OBP-TypeScript.git"
+  },
+  "keywords": [
+    "typescript",
+    "open banking",
+    "obp",
+    "javascript",
+    "functional"
+  ],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/OpenBankProject/OBP-TypeScript/issues"
+  },
+  "homepage": "https://github.com/OpenBankProject/OBP-TypeScript#readme"
 }

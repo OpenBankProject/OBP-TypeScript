@@ -79,14 +79,37 @@ export class OAuth {
     );
   }
 
+  /**
+   * Get oauth.OAuth instance.
+   *
+   * @returns An {oauth.OAuth} value
+   *
+   * @public
+   */
   get(): oauth.OAuth {
     return this.instance;
   }
 
+  /**
+   * Get OAuthConfig object.
+   *
+   * @returns An {OAuthConfig} value
+   *
+   * @public
+   */
   configs(): OAuthConfig {
     return this.config;
   }
 
+  /**
+   * Get the Oauth authentication header.
+   *
+   * @param pathUri - The the relative path of the URL.
+   * @param method - The http method.
+   * @returns An {OAuthConfig} value
+   *
+   * @public
+   */
   authHeader(pathUri: string, method: string): string {
     if (!this.config.accessToken) console.warn("Access token is not set.");
 

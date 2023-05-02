@@ -3,7 +3,7 @@ import {
   Version,
   APIClientConfig,
   DirectLoginAuthentication,
-  create,
+  post,
   get,
   Transaction,
 } from "../src/api";
@@ -52,7 +52,7 @@ const viewId = "owner";
       amount: 1.0,
     },
   };
-  await create<API.Transaction>(
+  await post<API.Transaction>(
     clientConfig,
     Transaction
   )(CreateTransactionRequestAccount)(
