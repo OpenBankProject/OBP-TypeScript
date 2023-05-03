@@ -7,4 +7,5 @@
 ### Modules
 
 - [api](modules/api.md)
+- [auth](modules/auth.md)
 - [index](modules/index.md)

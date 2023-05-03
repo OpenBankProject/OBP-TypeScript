@@ -28,6 +28,7 @@ import {
   APIRequest,
   APIClientConfig,
   apiCallWithCustomURIPath,
+  apiCallWithCustomBody,
 } from "./client";
 
 /**
@@ -52,6 +53,77 @@ export const GetAny =
   };
 
 /**
+ * Create Any Request.
+ *
+ * @param config - The APIClientConfig object
+ * @param methodCall - A higher order function
+ * @returns A curried function
+ *
+ * @see {@link APIClientConfig}
+ * @see {@link TransactionRequestAccountBody}
+ *
+ * @public
+ */
+export const CreateAny =
+  (
+    config: APIClientConfig,
+    methodCall: (
+      config: APIClientConfig,
+      path: string,
+      body: any
+    ) => Promise<any>
+  ) =>
+  (path: string) => {
+    return apiCallWithCustomBody<API.Any, any>(config, path, methodCall);
+  };
+
+/**
+ * Update Any Request.
+ *
+ * @param config - The APIClientConfig object
+ * @param methodCall - A higher order function
+ * @returns A curried function
+ *
+ * @see {@link APIClientConfig}
+ * @see {@link TransactionRequestAccountBody}
+ *
+ * @public
+ */
+export const UpdateAny =
+  (
+    config: APIClientConfig,
+    methodCall: (
+      config: APIClientConfig,
+      path: string,
+      body: any
+    ) => Promise<any>
+  ) =>
+  (path: string) => {
+    return apiCallWithCustomBody<API.Any, any>(config, path, methodCall);
+  };
+
+/**
+ * Delete Any Request.
+ *
+ * @param config - The APIClientConfig object
+ * @param methodCall - A higher order function
+ * @returns A curried function
+ *
+ * @see {@link APIClientConfig}
+ * @see {@link TransactionRequestAccountBody}
+ *
+ * @public
+ */
+export const DiscardAny =
+  (
+    config: APIClientConfig,
+    methodCall: (config: APIClientConfig, path: string) => Promise<any>
+  ) =>
+  async (path: string) => {
+    return await methodCall(config, path);
+  };
+
+/**
  * Returns an anonymous function for creating or getting Any data.
  *
  * @param config - The APIClientConfig object
@@ -65,6 +137,32 @@ export const GetAny =
  */
 export const Any: APIRequest<API.Any> = {
   get: (
+    config: APIClientConfig,
+    methodCall: (config: APIClientConfig, path: string) => Promise<any>
+  ) => {
+    return apiCallWithCustomURIPath<API.Any>(config, methodCall);
+  },
+  create: (
+    config: APIClientConfig,
+    methodCall: (
+      config: APIClientConfig,
+      path: string,
+      body: any
+    ) => Promise<any>
+  ) => {
+    return apiCallWithCustomURIPath<API.Any>(config, methodCall);
+  },
+  update: (
+    config: APIClientConfig,
+    methodCall: (
+      config: APIClientConfig,
+      path: string,
+      body: any
+    ) => Promise<any>
+  ) => {
+    return apiCallWithCustomURIPath<API.Any>(config, methodCall);
+  },
+  discard: (
     config: APIClientConfig,
     methodCall: (config: APIClientConfig, path: string) => Promise<any>
   ) => {

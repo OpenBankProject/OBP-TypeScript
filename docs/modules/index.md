@@ -12,10 +12,12 @@
 - [Account](index.md#account)
 - [Any](index.md#any)
 - [Bank](index.md#bank)
+- [CreateAny](index.md#createany)
 - [CreateTransactionRequestAccount](index.md#createtransactionrequestaccount)
 - [Current](index.md#current)
 - [Customer](index.md#customer)
 - [DirectLoginAuthentication](index.md#directloginauthentication)
+- [DiscardAny](index.md#discardany)
 - [GetAccountsByBankId](index.md#getaccountsbybankid)
 - [GetAny](index.md#getany)
 - [GetBanks](index.md#getbanks)
@@ -28,12 +30,17 @@
 - [KYC](index.md#kyc)
 - [Metadata](index.md#metadata)
 - [MethodCall](index.md#methodcall)
+- [OAuth](index.md#oauth)
+- [OAuthConfig](index.md#oauthconfig)
 - [Transaction](index.md#transaction)
 - [TransactionRequestAccountBody](index.md#transactionrequestaccountbody)
+- [UpdateAny](index.md#updateany)
 - [User](index.md#user)
 - [Version](index.md#version)
 - [create](index.md#create)
+- [discard](index.md#discard)
 - [get](index.md#get)
+- [update](index.md#update)
 
 ## References
 
@@ -73,6 +80,12 @@ Re-exports [Bank](api.md#bank)
 
 ___
 
+### CreateAny
+
+Re-exports [CreateAny](api.md#createany)
+
+___
+
 ### CreateTransactionRequestAccount
 
 Re-exports [CreateTransactionRequestAccount](api.md#createtransactionrequestaccount)
@@ -94,6 +107,12 @@ ___
 ### DirectLoginAuthentication
 
 Re-exports [DirectLoginAuthentication](api.md#directloginauthentication)
+
+___
+
+### DiscardAny
+
+Re-exports [DiscardAny](api.md#discardany)
 
 ___
 
@@ -169,6 +188,18 @@ Re-exports [MethodCall](api.md#methodcall)
 
 ___
 
+### OAuth
+
+Re-exports [OAuth](../classes/auth.OAuth.md)
+
+___
+
+### OAuthConfig
+
+Re-exports [OAuthConfig](auth.md#oauthconfig)
+
+___
+
 ### Transaction
 
 Re-exports [Transaction](api.md#transaction)
@@ -178,6 +209,12 @@ ___
 ### TransactionRequestAccountBody
 
 Re-exports [TransactionRequestAccountBody](api.md#transactionrequestaccountbody)
+
+___
+
+### UpdateAny
+
+Re-exports [UpdateAny](api.md#updateany)
 
 ___
 
@@ -199,6 +236,18 @@ Re-exports [create](api.md#create)
 
 ___
 
+### discard
+
+Re-exports [discard](api.md#discard)
+
+___
+
 ### get
 
 Re-exports [get](api.md#get)
+
+___
+
+### update
+
+Re-exports [update](api.md#update)

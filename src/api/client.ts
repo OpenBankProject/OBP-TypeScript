@@ -24,7 +24,7 @@
  */
 
 import superagent from "superagent";
-import { OAuth, OAuthConfig } from "../oauth";
+import { OAuth, OAuthConfig } from "../auth";
 
 /**
  * OBP API Versions.
@@ -126,6 +126,8 @@ export type MethodCall<T> = (
 export type APIRequest<T> = {
   get?: (config: APIClientConfig, methodCall: MethodCall<T>) => any;
   create?: (config: APIClientConfig, methodCall: MethodCall<T>) => any;
+  update?: (config: APIClientConfig, methodCall: MethodCall<T>) => any;
+  discard?: (config: APIClientConfig, methodCall: MethodCall<T>) => any;
 };
 
 /**
@@ -254,7 +256,35 @@ const getDirectLoginToken = async (
 };
 
 /**
- * Send a GET request and returns a response.
+ * Get the Oauth header.
+ *
+ * @param config - The APIClientConfig object
+ * @returns An {object} value
+ *
+ * @see APIClientConfig
+ */
+const getOauthHeader = async (
+  config: APIClientConfig,
+  path: string,
+  pathUri: string
+): Promise<string> => {
+  let header: any;
+  if (config.oauthConfig) {
+    if (!config.oauthConfig.baseUri)
+      config.oauthConfig["baseUri"] = config.baseUri;
+    const oauth = new OAuth(config.oauthConfig);
+    header = oauth.authHeader(pathUri, "GET");
+  } else {
+    if (!config.token) {
+      config.token = await getDirectLoginToken(config);
+      header = config.token;
+    }
+  }
+  return header;
+};
+
+/**
+ * Send a GET HTTP request and returns a response.
  *
  * @param config - The APIClientConfig object
  * @returns An {object} value
@@ -268,25 +298,17 @@ export const getRequest = async (
   path: string
 ): Promise<any> => {
   const pathUri = uri(config, path);
-  let header: any;
-  if (config.oauthConfig) {
-    if (!config.oauthConfig.baseUri)
-      config.oauthConfig["baseUri"] = config.baseUri;
-    const oauth = new OAuth(config.oauthConfig);
-    header = oauth.authHeader(pathUri, "GET");
-  } else {
-    if (!config.token) {
-      config.token = await getDirectLoginToken(config);
-      header = config.token;
-    }
-  }
-  return JSON.parse(
-    (await superagent.get(pathUri).set("Authorization", header)).text
-  );
+  const header = await getOauthHeader(config, path, pathUri);
+  return (
+    await superagent
+      .get(pathUri)
+      .set("Authorization", header)
+      .catch((error) => error.response)
+  ).body;
 };
 
 /**
- * Send a POST request and returns a response.
+ * Send a POST HTTP request and returns a response.
  *
  * @param config - The APIClientConfig object
  * @param path - The URI path
@@ -303,17 +325,68 @@ export const postRequest = async (
   body: any
 ): Promise<any> => {
   const pathUri = uri(config, path);
-  if (!config.token) {
-    config.token = await getDirectLoginToken(config);
-  }
-  return JSON.parse(
-    (
-      await superagent
-        .post(pathUri)
-        .set("Authorization", config.token)
-        .send(body)
-    ).text
-  );
+  const header = await getOauthHeader(config, path, pathUri);
+  return (
+    await superagent
+      .post(pathUri)
+      .set("Authorization", header)
+      .send(body)
+      .catch((error) => error.response)
+  ).body;
+};
+
+/**
+ * Send a PUT HTTP request and returns a response.
+ *
+ * @param config - The APIClientConfig object
+ * @param path - The URI path
+ * @param body - The request body
+ * @returns An {object} value
+ *
+ * @see APIClientConfig
+ *
+ * @public
+ */
+export const putRequest = async (
+  config: APIClientConfig,
+  path: string,
+  body: any
+): Promise<any> => {
+  const pathUri = uri(config, path);
+  const header = await getOauthHeader(config, path, pathUri);
+  return (
+    await superagent
+      .put(pathUri)
+      .set("Authorization", header)
+      .send(body)
+      .catch((error) => error.response)
+  ).body;
+};
+
+/**
+ * Send a DELETE HTTP request and returns a response.
+ *
+ * @param config - The APIClientConfig object
+ * @param path - The URI path
+ * @param body - The request body
+ * @returns An {object} value
+ *
+ * @see APIClientConfig
+ *
+ * @public
+ */
+export const deleteRequest = async (
+  config: APIClientConfig,
+  path: string
+): Promise<any> => {
+  const pathUri = uri(config, path);
+  const header = await getOauthHeader(config, path, pathUri);
+  return (
+    await superagent
+      .delete(pathUri)
+      .set("Authorization", header)
+      .catch((error) => error.response)
+  ).body;
 };
 
 /**
@@ -352,4 +425,42 @@ export const create = <T>(
   request: APIRequest<T>
 ): any => {
   return request.create(config, postRequest);
+};
+
+/**
+ * A PUT request function that updates an API data and returns the result.
+ *
+ * @param config - The APIClientConfig object
+ * @param request - The APIRequest object
+ * @returns An @typeParam {Object} value
+ *
+ * @see APIClientConfig
+ * @see APIRequest<T>
+ *
+ * @public
+ */
+export const update = <T>(
+  config: APIClientConfig,
+  request: APIRequest<T>
+): any => {
+  return request.update(config, putRequest);
+};
+
+/**
+ * A DELETE request function that deletes an API data.
+ *
+ * @param config - The APIClientConfig object
+ * @param request - The APIRequest object
+ * @returns An @typeParam {Object} value
+ *
+ * @see APIClientConfig
+ * @see APIRequest<T>
+ *
+ * @public
+ */
+export const discard = <T>(
+  config: APIClientConfig,
+  request: APIRequest<T>
+): any => {
+  return request.discard(config, deleteRequest);
 };
