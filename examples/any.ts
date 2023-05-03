@@ -35,8 +35,8 @@ const clientConfig: APIClientConfig = {
   baseUri: "https://apisandbox.openbankproject.com",
   version: Version.v510,
   withFixedVersion: true,
-  authentication: directLogin,
-  //oauthConfig: oauthConfig,
+  //authentication: directLogin,
+  oauthConfig: oauthConfig,
 };
 
 (async () => {

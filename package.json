@@ -1,6 +1,6 @@
 {
   "name": "obp-typescript",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "license": "Apache-2.0",
   "scripts": {
     "build": "tsc --declaration && tsc-alias",
@@ -8,13 +8,13 @@
     "lint": "yarn prettier --w . && yarn eslint src __tests__"
   },
   "dependencies": {
-    "dotenv": "^16.0.3",
     "global": "^4.4.0",
     "multer": "^1.4.5-lts.1",
     "oauth": "^0.10.0",
     "superagent": "^8.0.9"
   },
   "devDependencies": {
+    "dotenv": "^16.0.3",
     "@jest/globals": "^29.3.1",
     "@types/jest": "^29.2.3",
     "@types/superagent": "^4.1.16",

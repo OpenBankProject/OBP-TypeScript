@@ -23,7 +23,6 @@
  *  TESOBE (http://www.tesobe.com/)
  */
 
-import "dotenv/config";
 export { Bank, GetBanks, GetBanksById } from "./api/bank";
 export { Account, GetAccountsByBankId } from "./api/account";
 export { KYC, GetKYCStatus } from "./api/kyc";
