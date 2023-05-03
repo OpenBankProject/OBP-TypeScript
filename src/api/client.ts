@@ -299,14 +299,12 @@ export const getRequest = async (
 ): Promise<any> => {
   const pathUri = uri(config, path);
   const header = await getOauthHeader(config, path, pathUri);
-  return JSON.parse(
-    (
-      await superagent
-        .get(pathUri)
-        .set("Authorization", header)
-        .catch((error) => error.response)
-    ).text
-  );
+  return (
+    await superagent
+      .get(pathUri)
+      .set("Authorization", header)
+      .catch((error) => error.response)
+  ).body;
 };
 
 /**
@@ -328,15 +326,13 @@ export const postRequest = async (
 ): Promise<any> => {
   const pathUri = uri(config, path);
   const header = await getOauthHeader(config, path, pathUri);
-  return JSON.parse(
-    (
-      await superagent
-        .post(pathUri)
-        .set("Authorization", header)
-        .send(body)
-        .catch((error) => error.response)
-    ).text
-  );
+  return (
+    await superagent
+      .post(pathUri)
+      .set("Authorization", header)
+      .send(body)
+      .catch((error) => error.response)
+  ).body;
 };
 
 /**
@@ -358,15 +354,13 @@ export const putRequest = async (
 ): Promise<any> => {
   const pathUri = uri(config, path);
   const header = await getOauthHeader(config, path, pathUri);
-  return JSON.parse(
-    (
-      await superagent
-        .put(pathUri)
-        .set("Authorization", header)
-        .send(body)
-        .catch((error) => error.response)
-    ).text
-  );
+  return (
+    await superagent
+      .put(pathUri)
+      .set("Authorization", header)
+      .send(body)
+      .catch((error) => error.response)
+  ).body;
 };
 
 /**
@@ -387,14 +381,12 @@ export const deleteRequest = async (
 ): Promise<any> => {
   const pathUri = uri(config, path);
   const header = await getOauthHeader(config, path, pathUri);
-  return JSON.parse(
-    (
-      await superagent
-        .delete(pathUri)
-        .set("Authorization", header)
-        .catch((error) => error.response)
-    ).text
-  );
+  return (
+    await superagent
+      .delete(pathUri)
+      .set("Authorization", header)
+      .catch((error) => error.response)
+  ).body;
 };
 
 /**

@@ -30,7 +30,7 @@ import {
   GetTransactionsForAccountFull,
   TransactionRequestAccountBody,
   CreateTransactionRequestAccount,
-} from "obp-typescript/src";
+} from "obp-typescript";
 
 (async () => {
   const directLogin: DirectLoginAuthentication = {
