@@ -95,7 +95,7 @@ const clientConfig: APIClientConfig = {
     type: "STRING",
     description: "description",
     alias: "STRING",
-    can_be_seen_on_views: ["bank"],
+    can_be_seen_on_views: ["owner"],
     is_active: true,
   };
   console.log(
