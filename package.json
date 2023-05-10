@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc --declaration && tsc-alias",
     "test": "jest --setupFiles dotenv/config",
-    "lint": "yarn prettier --w . && yarn eslint src __tests__"
+    "lint": "prettier --w . && eslint src __tests__"
   },
   "dependencies": {
     "global": "^4.4.0",

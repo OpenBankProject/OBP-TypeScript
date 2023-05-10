@@ -6,6 +6,7 @@
     "outDir": "dist",
     "baseUrl": "src",
     "resolveJsonModule": true,
+    "declaration": true,
     "paths": {
       "*": ["node_modules/*"]
     }
