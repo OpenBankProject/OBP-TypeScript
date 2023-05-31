@@ -266,14 +266,15 @@ const getDirectLoginToken = async (
 const getOauthHeader = async (
   config: APIClientConfig,
   path: string,
-  pathUri: string
+  pathUri: string,
+  method: string
 ): Promise<string> => {
   let header: any;
   if (config.oauthConfig) {
     if (!config.oauthConfig.baseUri)
       config.oauthConfig["baseUri"] = config.baseUri;
     const oauth = new OAuth(config.oauthConfig);
-    header = oauth.authHeader(pathUri, "GET");
+    header = oauth.authHeader(pathUri, method);
   } else {
     if (!config.token) {
       config.token = await getDirectLoginToken(config);
@@ -298,7 +299,7 @@ export const getRequest = async (
   path: string
 ): Promise<any> => {
   const pathUri = uri(config, path);
-  const header = await getOauthHeader(config, path, pathUri);
+  const header = await getOauthHeader(config, path, pathUri, "GET");
   return (
     await superagent
       .get(pathUri)
@@ -325,7 +326,7 @@ export const postRequest = async (
   body: any
 ): Promise<any> => {
   const pathUri = uri(config, path);
-  const header = await getOauthHeader(config, path, pathUri);
+  const header = await getOauthHeader(config, path, pathUri, "POST");
   return (
     await superagent
       .post(pathUri)
@@ -353,7 +354,7 @@ export const putRequest = async (
   body: any
 ): Promise<any> => {
   const pathUri = uri(config, path);
-  const header = await getOauthHeader(config, path, pathUri);
+  const header = await getOauthHeader(config, path, pathUri, "PUT");
   return (
     await superagent
       .put(pathUri)
@@ -380,7 +381,7 @@ export const deleteRequest = async (
   path: string
 ): Promise<any> => {
   const pathUri = uri(config, path);
-  const header = await getOauthHeader(config, path, pathUri);
+  const header = await getOauthHeader(config, path, pathUri, "DELETE");
   return (
     await superagent
       .delete(pathUri)
