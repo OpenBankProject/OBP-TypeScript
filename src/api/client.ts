@@ -287,7 +287,7 @@ const getOauthHeader = async (
 /**
  * Get the Authorization header.
  *
- * @param header - The OAuth header valur
+ * @param header - The OAuth header value
  * @returns An {object} value
  *
  *
