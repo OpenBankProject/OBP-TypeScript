@@ -236,7 +236,6 @@ const getDirectLoginToken = async (
   config: APIClientConfig
 ): Promise<string> => {
   if (!config.authentication) {
-    console.warn("Authentication is not set.");
     return "";
   }
   const loginUri = config.baseUri + "/my/logins/direct";
@@ -244,12 +243,13 @@ const getDirectLoginToken = async (
   const password = config.authentication.password;
   const consumerKey = config.authentication.consumerKey;
   const directLogin = `DirectLogin username=${username},password=${password},consumer_key=${consumerKey}`;
+  const authorization = directLogin ? { Authorization: directLogin } : {};
   const response = JSON.parse(
     (
       await superagent
         .post(loginUri)
         .set("Content-Type", "application/json")
-        .set("Authorization", directLogin)
+        .set(authorization)
     ).text
   );
   return "DirectLogin token=" + response.token;
@@ -285,6 +285,23 @@ const getOauthHeader = async (
 };
 
 /**
+ * Get the Authorization header.
+ *
+ * @param header - The OAuth header value
+ * @returns An {object} value
+ *
+ *
+ * @private
+ */
+const getValidHeader = (header: string): any => {
+  if (header) {
+    return { Authorization: header, "Content-Type": "application/json" };
+  } else {
+    return { "Content-Type": "application/json" };
+  }
+};
+
+/**
  * Send a GET HTTP request and returns a response.
  *
  * @param config - The APIClientConfig object
@@ -303,7 +320,7 @@ export const getRequest = async (
   return (
     await superagent
       .get(pathUri)
-      .set("Authorization", header)
+      .set(getValidHeader(header))
       .catch((error) => error.response)
   ).body;
 };
@@ -330,7 +347,7 @@ export const postRequest = async (
   return (
     await superagent
       .post(pathUri)
-      .set("Authorization", header)
+      .set(getValidHeader(header))
       .send(body)
       .catch((error) => error.response)
   ).body;
@@ -358,7 +375,7 @@ export const putRequest = async (
   return (
     await superagent
       .put(pathUri)
-      .set("Authorization", header)
+      .set(getValidHeader(header))
       .send(body)
       .catch((error) => error.response)
   ).body;
@@ -385,7 +402,7 @@ export const deleteRequest = async (
   return (
     await superagent
       .delete(pathUri)
-      .set("Authorization", header)
+      .set(getValidHeader(header))
       .catch((error) => error.response)
   ).body;
 };

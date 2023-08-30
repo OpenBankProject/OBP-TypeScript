@@ -111,8 +111,6 @@ export class OAuth {
    * @public
    */
   authHeader(pathUri: string, method: string): string {
-    if (!this.config.accessToken) console.warn("Access token is not set.");
-
     if (this.config.accessToken) {
       return this.instance.authHeader(
         pathUri,
